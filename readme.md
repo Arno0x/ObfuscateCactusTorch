@@ -32,7 +32,7 @@ Installation is pretty straight forward:
 3. Generate an x86 shellcode **with no encoding**, you can use metasploit for instance.
 4. Copy the shellcode file as well as the provided `cactusTorch/cactusTorch_serialized.bin` in the `servedFiles` folder of your WebDav Delivery folder.
 5. Start WebDavDelivery.
-6. Launch the stager generated in step 2.
+6. On the target system, launch the stager generated in step 2.
 7. You can see on the WebDavDelivery side that the stager is downloading the shellcode and the serialized object.
 
 <img src="https://dl.dropboxusercontent.com/s/nhkovmmiadfqyam/obfuscateCactusTorch_02.jpg?dl=0" width="600">
