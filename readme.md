@@ -27,7 +27,7 @@ Installation is pretty straight forward:
    - binary name in which CactusTorch should inject the shellcode (*must be a 32 bits binary check CactusTorch project for details*)
    - output file name for the generated stager (*either VBA or JS*)
 
-<img src="https://dl.dropboxusercontent.com/s/ewl76gennz59ifx/obfuscateCactusTorch_01.jpg?dl=0" width="600">
+<img src="https://dl.dropboxusercontent.com/s/ewl76gennz59ifx/obfuscateCactusTorch_01.jpg?dl=0" width="873">
 
 3. Generate an x86 shellcode **with no encoding**, you can use metasploit for instance.
 4. Copy the shellcode file as well as the provided `cactusTorch/cactusTorch_serialized.bin` in the `servedFiles` folder of your WebDav Delivery folder.
@@ -35,12 +35,12 @@ Installation is pretty straight forward:
 6. On the target system, launch the stager generated in step 2.
 7. You can see on the WebDavDelivery side that the stager is downloading the shellcode and the serialized object.
 
-<img src="https://dl.dropboxusercontent.com/s/nhkovmmiadfqyam/obfuscateCactusTorch_02.jpg?dl=0" width="600">
+<img src="https://dl.dropboxusercontent.com/s/nhkovmmiadfqyam/obfuscateCactusTorch_02.jpg?dl=0" width="800">
 
 8. Let the magic happen :-)
 
 
-<img src="https://dl.dropboxusercontent.com/s/qki8yq0sjcs6sh1/obfuscateCactusTorch_03.jpg?dl=0" width="600">
+<img src="https://dl.dropboxusercontent.com/s/qki8yq0sjcs6sh1/obfuscateCactusTorch_03.jpg?dl=0" width="800">
 
 DISCLAIMER
 ----------------
