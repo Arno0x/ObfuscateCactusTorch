@@ -93,21 +93,25 @@ def color(string, color=None, bold=None):
 			return string
 
 #------------------------------------------------------------------------
-def caesar(destLangage, key, inputString):
-	"""
-	Dumb caesar encoding of an input string using a key (integer) to shift ASCII codes
-	"""
-
+def caesar(cls, destLangage, key, inputString):
+	"""Dumb caesar encoding of an input string using a key (integer) to shift ASCII codes"""
 	encrypted = ""
 	for char in inputString:
 		num = ord(char) - 32 # Translate the working space, 32 being the first printable ASCI char
 		shifted = (num + int(key))%94 + 32
-		
+
 		# Escape some characters depending on the type of target langage (JS or VBA)
-		if shifted == 34:
-			encrypted += "\"{}".format(chr(shifted)) # Escaping the double quote
-		elif shifted == 92 and destLangage == 'js':
-			encrypted += "\\{}".format(chr(shifted)) # Escaping the backspace in JS
+		
+		if shifted == 34: # Escaping the double quote
+			if destLangage == 'vba':
+				encrypted += "\"{}".format(chr(shifted))
+			elif destLangage == 'js':
+				encrypted += "\\{}".format(chr(shifted))
+		elif shifted == 92:
+			if destLangage == 'js':
+				encrypted += "\\{}".format(chr(shifted)) # Escaping the backspace in JS
+			else:
+				encrypted += chr(shifted)	
 		else:
 			encrypted += chr(shifted)
 
