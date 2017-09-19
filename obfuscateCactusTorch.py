@@ -93,7 +93,7 @@ def color(string, color=None, bold=None):
 			return string
 
 #------------------------------------------------------------------------
-def caesar(cls, destLangage, key, inputString):
+def caesar(destLangage, key, inputString):
 	"""Dumb caesar encoding of an input string using a key (integer) to shift ASCII codes"""
 	encrypted = ""
 	for char in inputString:
